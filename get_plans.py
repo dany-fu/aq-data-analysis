@@ -48,9 +48,9 @@ def serialize_aq_plans(aq_plan):
                 fv['sample_type'] = None
 
         if op['operation_type']['category'] is not None:
-            op['operation_type'] = op['operation_type']['category']
+            op['category'] = op['operation_type']['category']
         else:
-            op['operation_type'] = None
+            op['category'] = None
 
     for wire in serialized_plan['wires']:
         # destination and source changes to "to" and "from" after serialization
